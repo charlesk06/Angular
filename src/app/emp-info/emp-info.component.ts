@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component ,OnInit } from '@angular/core';
 //Import Records Service into Em-info Component
 import {RecordsService} from "../records.service";
-
 @Component({
   selector: 'app-emp-info',
   templateUrl: './emp-info.component.html',
@@ -9,7 +8,7 @@ import {RecordsService} from "../records.service";
   //Declare instance has been created into the component provider
   providers: [RecordsService]
 })
-export class EmpInfoComponent {
+export class EmpInfoComponent implements OnInit{
 
 infoReceived1: String[]=[];
 infoReceived2: String[]=[];
@@ -29,5 +28,7 @@ getInfoFromServiceClass3(){
 constructor(private rservice : RecordsService){
 
 }
-
+ngOnInit(): void {
+    
+}
 }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 //Import Records Service into Em-info Component
-import {RecordsService} from "../records.service"
+import {RecordsService} from "../records.service";
 
 @Component({
   selector: 'app-emp-info',

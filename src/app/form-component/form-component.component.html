@@ -3,18 +3,18 @@
     <form #login= "ngForm" (ngSubmit)="submit(login)">
         <div class="form-group">
             <label for="Firstname">FirstName</label><br>
-            <input #name ="ngModel" required minlegth="2" maxlegth="25" type="text" name="firstname" class="form-control" ngModel>
-            <div *ngIf ="name.touched && name.invalid" class="alert alert-danger">
-                    <p *ngIf ="name.errors.required">Firstname Required!!</p>
-                    <p *ngIf ="name.errors.minlegth">Sorry Short Firstname!!</p>
-                </div>
-            
+            <input #name ="ngModel" required minlegth="5" maxlegth="25" type="text" name="firstname" class="form-control" ngModel>
+            <div *ngIf="name.touched && name.invalid" class="alert alert-danger">
+                <p *ngIf="name.errors?.['required']">First Name is required</p>
             </div>
         </div>
         <pre></pre>
         <div class="form-group">
             <label for="Lastname">LastName</label><br>
-            <input type="text" name="Lastname" class="form-control" ngModel>
+            <input #name="ngModel" type="text" name="Lastname" class="form-control" ngModel>
+            <div *ngIf="name.touched && name.invalid" class="alert alert-danger">
+                <p *ngIf="name.errors?.['required']">Last Name is required</p>
+            </div>
         </div>
         <pre></pre>
         <div class="form-group">
@@ -24,7 +24,10 @@
         <pre></pre>
         <div class="form-group">
             <label for="Passeord">Password</label><br>
-            <input type="text" name="password]" class="form-control" ngModel>
+            <input #name="ngModel" type="text" name="password]" class="form-control" ngModel>
+            <div *ngIf="name.touched && name.invalid" class="alert alert-danger">
+                <p *ngIf="name.errors?.['required']">Password is required</p>
+            </div>
         </div>
         <pre></pre>
         <button class="btn btn-primary" type="submit">Submit</button>

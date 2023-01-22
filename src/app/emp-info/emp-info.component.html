@@ -1,5 +1,16 @@
 <!-- Create unordered List to display empo-info-->
-<button type="button" name="button" (click)='getInfoFromServiceClass1()'>Employee1</button>
+<button type="button" name="button" (click)='getInfoFromServiceClass1()'>User1</button>
 <ul class="list-group">
- <!--<li *ngFor = "Let info  of infoReceived1" class="list-group-info">{{info}}</li>--> 
+ <li *ngFor = "let info  of infoReceived1" class="list-group-info">{{info}}</li>
 </ul>
+<pre></pre>
+<button type="button" name="button" (click)='getInfoFromServiceClass2()'>User2</button>
+<ul class="list-group">
+ <li *ngFor = "let info  of infoReceived2" class="list-group-info">{{info}}</li>
+</ul>
+<pre></pre>
+<button type="button" name="button" (click)='getInfoFromServiceClass3()'>User3</button>
+<ul class="list-group">
+ <li *ngFor = "let info  of infoReceived3" class="list-group-info">{{info}}</li>
+</ul>
+<pre></pre>

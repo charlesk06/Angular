@@ -8,6 +8,10 @@ import { EmpInfoComponent } from './emp-info/emp-info.component';
 import { FormComponentComponent } from './form-component/form-component.component';
 import { FormsModule } from '@angular/forms';
 import { from } from 'rxjs';
+import { NavbarComponent } from './Components/navbar/navbar.component';
+import { IntroComponent } from './Components/intro/intro.component';
+import { FooterComponent } from './Components/footer/footer.component';
+import { CoursesComponent } from './Components/courses/courses.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,11 @@ import { from } from 'rxjs';
     TextcomponentComponent,
     ImagecomponentComponent,
     EmpInfoComponent,
-    FormComponentComponent
+    FormComponentComponent,
+    NavbarComponent,
+    IntroComponent,
+    FooterComponent,
+    CoursesComponent
   ],
   imports: [
     BrowserModule,

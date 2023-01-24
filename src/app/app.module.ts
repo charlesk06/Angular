@@ -14,6 +14,11 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { CoursesComponent } from './Components/courses/courses.component';
 import { LoginComponent } from './Components/login/login.component';
 import { HomeComponent } from './Components/home/home.component';
+import { ForgetPasswordComponent } from './Components/forget-password/forget-password.component';
+import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
+import { RegisterComponent } from './Components/register/register.component';
+import { AboutComponent } from './Components/about/about.component';
+import { ServicesComponent } from './Components/services/services.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +32,12 @@ import { HomeComponent } from './Components/home/home.component';
     FooterComponent,
     CoursesComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    ForgetPasswordComponent,
+    ResetPasswordComponent,
+    RegisterComponent,
+    AboutComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,

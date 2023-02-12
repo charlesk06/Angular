@@ -15,71 +15,65 @@
 			<div class="row justify-content-sm-center h-100">
 				<div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
 					<div class="text-center my-5">
-						<img src="assets/logo.png" alt="logo" width="100">
+						<img src="assets/infinite.png" alt="logo" width="100">
 					</div>
 					<div class="card shadow-lg">
 						<div class="card-body p-5">
 							<h1 class="fs-4 card-title fw-bold mb-4">Register</h1>
-							<form method="POST" class="needs-validation" novalidate="" autocomplete="off">
+							<div *ngIf="msgTrue">Request Submitted  Successful</div>
+							<form #register="ngForm" (ngSubmit)="addNewUser()"  class="needs-validation" novalidate="" autocomplete="off">
 								<div class="mb-3">
 									<label class="mb-2 text-muted" for="name">First Name*</label>
-									<input id="name" type="text" class="form-control" name="name" value="" required autofocus>
+									<input id="name" type="text" class="form-control" name="firstname" value="" required autofocus>
 									<div class="invalid-feedback">
 										First Name is required	
 									</div>
 								</div>
 								<div class="mb-3">
 									<label class="mb-2 text-muted" for="name">Last Name*</label>
-									<input id="name" type="text" class="form-control" name="name" value="" required autofocus>
+									<input id="name" type="text" class="form-control" name="lastname" value="" required autofocus>
 									<div class="invalid-feedback">
 										Last Name is required	
 									</div>
 								</div>
 								<div class="mb-3">
 									<label class="mb-2 text-muted" for="name">Job Title*</label>
-									<input id="name" type="text" class="form-control" name="name" value="" required autofocus>
+									<input id="name" type="text" class="form-control" name="title" value="" required autofocus>
 									<div class="invalid-feedback">
 										Job title is required	
 									</div>
 								</div>
 								<div class="mb-3">
-									<label class="mb-2 text-muted" for="name">Company Name*</label>
-									<input id="name" type="text" class="form-control" name="name" value="" required autofocus>
-									<div class="invalid-feedback">
-										Company Name is required	
-									</div>
-								</div>
-								<div class="mb-3">
 									<label class="mb-2 text-muted" for="name">Phone Number*</label>
-									<input id="name" type="text" class="form-control" name="name" value="" required autofocus>
+									<input id="name" type="text" class="form-control" name="ContactNumber" value="" required autofocus>
 									<div class="invalid-feedback">
 										Phone Number is required	
 									</div>
 								</div>
 								<div class="mb-3">
 									<label class="mb-2 text-muted" for="name">Country/Regio*</label>
-									<input id="name" type="text" class="form-control" name="name" value="" required autofocus>
+									<input id="name" type="text" class="form-control" name="Country" value="" required autofocus>
 									<div class="invalid-feedback">
 										Country/Region is required	
 									</div>
 								</div>
 								<div class="mb-3">
 									<label class="mb-2 text-muted" for="name">Postal Code</label>
-									<input id="name" type="text" class="form-control" name="name" value="" required autofocus>
+									<input id="name" type="text" class="form-control" name="PostaCode" value="" required autofocus>
 									<div class="invalid-feedback">
 										Postal Code is required	
 									</div>
 								</div>
 								<div class="mb-3">
 									<label class="mb-2 text-muted" for="name">City*</label>
-									<input id="name" type="text" class="form-control" name="name" value="" required autofocus>
+									<input id="name" type="text" class="form-control" name="City" value="" required autofocus>
 									<div class="invalid-feedback">
 										City is required	
 									</div>
 								</div>
 								<div class="mb-3">
 									<label class="mb-2 text-muted" for="email">E-Mail Address</label>
-									<input id="email" type="email" class="form-control" name="email" value="" required>
+									<input id="email" type="email" class="form-control" name="Email" value="" required>
 									<div class="invalid-feedback">
 										Email is invalid
 									</div>
@@ -87,7 +81,7 @@
 
 								<div class="mb-3">
 									<label class="mb-2 text-muted" for="password">Password*</label>
-									<input id="password" type="password" class="form-control" name="password" required>
+									<input id="password" type="password" class="form-control" name="Password" required>
 								    <div class="invalid-feedback">
 								    	Password is required
 							    	</div>
@@ -98,7 +92,7 @@
 								</p>
 
 								<div class="align-items-center d-flex">
-									<button type="submit" class="btn btn-primary ms-auto">
+									<button (click)="addNewUser()" type="submit" class="btn btn-primary ms-auto">
 										Register	
 									</button>
 								</div>

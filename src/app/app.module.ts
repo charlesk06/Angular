@@ -20,7 +20,6 @@ import { RegisterComponent } from './Components/register/register.component';
 import { AboutComponent } from './Components/about/about.component';
 import { ServicesComponent } from './Components/services/services.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ContactsComponent } from './Components/contacts/contacts.component';
  
 @NgModule({
   declarations: [
@@ -39,8 +38,7 @@ import { ContactsComponent } from './Components/contacts/contacts.component';
     ResetPasswordComponent,
     RegisterComponent,
     AboutComponent,
-    ServicesComponent,
-    ContactsComponent
+    ServicesComponent
     
   ],
   imports: [

@@ -1,0 +1,15 @@
+<p>contacts works!</p>
+<h2>List of Contacts</h2>
+<ul>
+    <li *ngFor="let contact of contactList">
+        {{contact.firstname}}
+    </li>  
+</ul>
+
+<h3>Create New Contacts</h3>
+
+<div *ngIf="msgTrue">Request Submitted  Successful</div>
+
+<code>Reuse Code</code>
+<br>
+<button (click)="addNewContact()">Add New Contact</button>

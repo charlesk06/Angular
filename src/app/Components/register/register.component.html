@@ -21,7 +21,7 @@
 						<div class="card-body p-5">
 							<h1 class="fs-4 card-title fw-bold mb-4">Register</h1>
 							<div *ngIf="msgTrue">Request Submitted  Successful</div>
-							<form #register="ngForm" (ngSubmit)="addNewUser()"  class="needs-validation" novalidate="" autocomplete="off">
+							<form #register="ngForm" class="needs-validation" novalidate="" autocomplete="off">
 								<div class="mb-3">
 									<label class="mb-2 text-muted" for="name">First Name*</label>
 									<input id="name" type="text" class="form-control" name="firstname" value="" required autofocus>
@@ -92,7 +92,7 @@
 								</p>
 
 								<div class="align-items-center d-flex">
-									<button (click)="addNewUser()" type="submit" class="btn btn-primary ms-auto">
+									<button type="submit" class="btn btn-primary ms-auto">
 										Register	
 									</button>
 								</div>

@@ -21,7 +21,9 @@ export class UserService {
   }
   
   creatUser(createBody: { FirstName: string; LastName: string; Title: string; Country: string; PostaCode: string; City: string; Email: string; ContactNumber: string; Password: string; }){
-    return this.httpClient.post('http://localhost:8181/User/signup',createBody)
+    const httpHeaders = new HttpHeaders();
+    httpHeaders.append('content-type','application/json')
+    return this.httpClient.post('http://localhost:8181/User/signup',createBody,{headers:httpHeaders})
     
   }
 
